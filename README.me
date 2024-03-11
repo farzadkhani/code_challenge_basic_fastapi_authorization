@@ -1,0 +1,33 @@
+# code challenge
+
+requirements:
+ - fastapi project
+ - register api
+ - login api
+ - logout api
+ - no db, just authorization in memory
+
+
+how to run:
+    in terminal:
+        docker compose up -d --build
+
+routs:
+    - registration
+        url: http://127.0.0.1:9000/register/
+        method: POST
+        body: {"username": "<USERNAME>", "password": "<PASSWORD>"}
+    
+    - list of usernames
+        url: http://127.0.0.1:9000/users/
+        method: GET
+    
+    - login
+        url: http://127.0.0.1:9000/login/
+        method: POST
+        body: {"username": "<USERNAME>", "password": "<PASSWORD>"}
+    
+    - logout
+        url: http://127.0.0.1:9000/logout/
+        method: POST
+
